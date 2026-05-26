@@ -1,6 +1,6 @@
 # Task-Master
 
-Task Master is a full-stack to-do list app with a vanilla HTML/CSS/JS frontend and a RESTful backend built with Node.js, Express, and PostgreSQL.
+Task Master is a full-stack to-do list app with HTML/Tailwind CSS/TS frontend and a RESTful backend built with Node.js, Express, and PostgreSQL.
 
 ## Features
 
