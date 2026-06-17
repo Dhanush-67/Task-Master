@@ -1,6 +1,6 @@
 # Task-Master
 
-Task Master is a full-stack to-do list app with HTML/Tailwind CSS/TS frontend and a RESTful backend built with Node.js, Express, and PostgreSQL.
+Task Master is a full-stack to-do list app with a TypeScript + TailwindCSS frontend and a RESTful backend built with Node.js, Express, and PostgreSQL.
 
 ## Features
 
@@ -8,6 +8,7 @@ Task Master is a full-stack to-do list app with HTML/Tailwind CSS/TS frontend an
 - Server-side validation with structured JSON error responses
 - PostgreSQL persistence with filtering by status and sorting by due date, title, or created date
 - Clean backend separation between routes, controllers, services, and database setup
+- Frontend authored in `script.ts` and rendered with Tailwind utility classes
 - Postman collection for endpoint testing in [postman/task-master.postman_collection.json](/home/zeeton/repos/Task-Master/postman/task-master.postman_collection.json)
 
 ## Project Structure
@@ -35,7 +36,13 @@ cp .env.example .env
 
 3. Update `DATABASE_URL` in `.env` to point to your PostgreSQL database.
 
-4. Start the server:
+4. Build the frontend TypeScript:
+
+```bash
+npm run build:frontend
+```
+
+5. Start the server:
 
 ```bash
 npm run dev
@@ -92,9 +99,7 @@ Returns a success message when the task is removed.
   "error": {
     "code": "VALIDATION_ERROR",
     "message": "Validation failed",
-    "details": [
-      "title must be at least 3 characters long"
-    ]
+    "details": ["title must be at least 3 characters long"]
   }
 }
 ```
